@@ -1,0 +1,36 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# App specific
+app/instance/
+app/static/uploads/
+app_backup/
+
+# Ignore virtual environment's internal ignores
+.venv/.gitignore
+
+# Auto-generated venv files
+.venv/.gitignore
+
+# Virtual Environments
+.venv/
+venv/
+env/
+.venv/.gitignore
+
+# Virtual Environments (NEW)
+.venv/
+venv/
+env/
