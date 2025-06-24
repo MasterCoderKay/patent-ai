@@ -34,3 +34,6 @@ env/
 .venv/
 venv/
 env/
+# Ignore duplicate paths
+patent-ai/backend/
+patent-ai/.gitignore
