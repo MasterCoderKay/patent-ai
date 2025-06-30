@@ -16,3 +16,14 @@ env/
 # App-specific
 app/instance/
 app/static/uploads/
+
+# API keys and secrets
+.env
+*.env
+
+# System/IDE files (optional but recommended)
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.pyc
