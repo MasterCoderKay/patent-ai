@@ -1,0 +1,60 @@
+2025-07-13 07:23:19,178 - app.main - INFO - Groq client initialized successfully
+2025-07-13 07:23:19,205 - app.main - INFO - Application startup complete
+2025-07-13 07:37:50,377 - app.main - INFO - Groq client initialized successfully
+2025-07-13 07:37:50,416 - app.main - INFO - Application startup complete
+2025-07-13 07:39:07,589 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-07-13 07:39:07,612 - app.main - WARNING - Attempt 1 failed: Error code: 404 - {'error': {'message': 'The model `llama-3-70b-8192` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-07-13 07:39:08,941 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-07-13 07:39:08,962 - app.main - WARNING - Attempt 2 failed: Error code: 404 - {'error': {'message': 'The model `llama-3-70b-8192` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-07-13 07:39:11,076 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-07-13 07:39:11,078 - app.main - WARNING - Attempt 3 failed: Error code: 404 - {'error': {'message': 'The model `llama-3-70b-8192` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-07-13 07:39:11,084 - app.main - ERROR - All 3 attempts failed
+2025-07-13 07:39:11,118 - app.main - ERROR - HTTP error 503: Groq API request failed after 3 attempts: Error code: 404 - {'error': {'message': 'The model `llama-3-70b-8192` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-07-13 07:45:32,417 - app.main - INFO - Groq client initialized successfully
+2025-07-13 07:45:32,453 - app.main - INFO - Application startup complete
+2025-07-13 07:47:02,288 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-07-13 07:47:02,291 - app.main - WARNING - Attempt 1 failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-07-13 07:47:03,356 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-07-13 07:47:03,450 - app.main - WARNING - Attempt 2 failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-07-13 07:47:05,540 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-07-13 07:47:05,543 - app.main - WARNING - Attempt 3 failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-07-13 07:47:05,545 - app.main - ERROR - All 3 attempts failed
+2025-07-13 07:47:05,548 - app.main - ERROR - HTTP error 503: Groq API request failed after 3 attempts: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-07-13 07:48:56,196 - app.main - INFO - Groq client initialized successfully
+2025-07-13 07:48:56,229 - app.main - INFO - Application startup complete
+2025-07-13 07:50:02,342 - app.main - INFO - Groq client initialized successfully
+2025-07-13 07:50:02,360 - app.main - INFO - Application startup complete
+2025-07-13 07:50:28,420 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 07:52:10,916 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 07:52:40,159 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 07:53:18,889 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 08:35:41,360 - app.main - INFO - Groq client initialized successfully
+2025-07-13 08:35:41,758 - app.main - INFO - Application startup complete
+2025-07-13 08:37:35,546 - app.main - ERROR - HTTP error 400: Missing required fields: ['title', 'description']
+2025-07-13 15:08:10,522 - app.main - INFO - Groq client initialized successfully
+2025-07-13 15:08:10,562 - app.main - INFO - Application startup complete
+2025-07-13 15:08:12,231 - app.main - ERROR - HTTP error 400: Missing required fields: ['title', 'description']
+2025-07-13 15:11:22,414 - app.main - INFO - Groq client initialized successfully
+2025-07-13 15:11:22,436 - app.main - INFO - Application startup complete
+2025-07-13 15:12:39,376 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 15:25:39,083 - app.main - INFO - Groq client initialized successfully
+2025-07-13 15:25:39,104 - app.main - INFO - Application startup complete
+2025-07-13 15:26:15,754 - app.main - INFO - Groq client initialized successfully
+2025-07-13 15:26:15,795 - app.main - INFO - Application startup complete
+2025-07-13 15:30:12,450 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 15:42:54,099 - openai._base_client - INFO - Retrying request to /chat/completions in 0.375891 seconds
+2025-07-13 15:42:59,622 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 15:43:01,665 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 15:43:37,270 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 19:05:39,829 - app.main - INFO - Groq client initialized successfully
+2025-07-13 19:05:40,213 - app.main - INFO - Application startup complete
+2025-07-14 05:46:18,815 - app.main - INFO - Groq client initialized successfully
+2025-07-14 05:46:18,841 - app.main - INFO - Application startup complete
+2025-07-14 05:46:31,838 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 05:46:33,212 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 05:46:34,030 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 05:46:35,261 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 05:54:03,495 - app.main - INFO - Groq client initialized successfully
+2025-07-14 05:54:03,540 - app.main - INFO - Application startup complete
+2025-07-14 05:59:39,064 - app.main - INFO - Groq client initialized successfully
+2025-07-14 05:59:39,127 - app.main - INFO - Application startup complete
