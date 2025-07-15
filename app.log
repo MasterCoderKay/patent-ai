@@ -1,0 +1,75 @@
+2025-07-15 01:57:09,092 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 01:57:09,134 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 01:57:09,138 - backend.app.main - INFO - Application startup complete
+2025-07-15 02:12:11,256 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 02:12:11,273 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 02:12:11,277 - backend.app.main - INFO - Application startup complete
+2025-07-15 02:30:05,164 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 02:30:05,183 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 02:30:05,186 - backend.app.main - INFO - Application startup complete
+2025-07-15 02:40:10,177 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 02:40:10,195 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 02:40:10,198 - backend.app.main - INFO - Application startup complete
+2025-07-15 02:42:39,634 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 02:42:39,651 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 02:42:39,655 - backend.app.main - INFO - Application startup complete
+2025-07-15 02:48:50,208 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 02:48:50,225 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 02:48:50,229 - backend.app.main - INFO - Application startup complete
+2025-07-15 02:57:27,402 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 02:57:27,419 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 02:57:27,422 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:33:38,709 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:33:38,752 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:33:38,757 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:35:58,077 - __main__ - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:35:58,095 - __main__ - INFO - Groq client initialized successfully
+2025-07-15 12:37:34,189 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:37:34,211 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:37:34,215 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:39:56,739 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:39:56,756 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:39:56,759 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:42:56,357 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:42:56,375 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:42:56,378 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:45:03,284 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:45:03,302 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:45:03,306 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:47:12,725 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:47:12,743 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:47:12,746 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:49:50,763 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:49:50,781 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:49:50,784 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:51:20,320 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:51:20,337 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:51:20,341 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:53:17,375 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:53:17,392 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:53:17,395 - backend.app.main - INFO - Application startup complete
+2025-07-15 12:59:37,093 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 12:59:37,110 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 12:59:37,113 - backend.app.main - INFO - Application startup complete
+2025-07-15 13:04:40,669 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 13:04:40,686 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 13:04:40,713 - backend.app.main - INFO - Application startup complete
+2025-07-15 13:27:25,976 - backend.app.main - WARNING - Invalid GROQ_API_KEY format (should start with 'gsk_')
+2025-07-15 13:27:25,993 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 13:27:25,997 - backend.app.main - INFO - Application startup complete
+2025-07-15 16:18:16,167 - backend.app.main - CRITICAL - Failed to initialize Groq client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-07-15 16:22:08,324 - backend.app.main - CRITICAL - Failed to initialize Groq client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-07-15 16:28:52,126 - backend.app.main - CRITICAL - Failed to initialize Groq client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-07-15 16:35:14,041 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 16:35:14,044 - backend.app.main - INFO - Application startup complete
+2025-07-15 16:39:25,227 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 16:39:25,229 - backend.app.main - INFO - Application startup complete
+2025-07-15 16:44:16,486 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 16:44:16,488 - backend.app.main - INFO - Application startup complete
+2025-07-15 16:44:54,005 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 16:45:09,640 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 16:45:09,642 - backend.app.main - INFO - Application startup complete
+2025-07-15 16:58:16,703 - backend.app.main - INFO - Groq client initialized successfully
+2025-07-15 16:58:16,705 - backend.app.main - INFO - Application startup complete
+2025-07-15 17:02:58,852 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:21:05,982 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
