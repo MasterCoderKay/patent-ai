@@ -3,20 +3,26 @@ services:
     name: patentai-backend
     env: python
     plan: free
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port 10000
+    rootDir: ./backend
+    buildCommand: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port 10000 --workers 2
     envVars:
       - key: GROQ_API_KEY
         sync: false
-    rootDir: .
+      - key: PYTHONPATH
+        value: /opt/render/project/src
 
   - type: web
     name: patentai-frontend
-    env: python
+    env: python # ⚠️ NOT "static" if you're using Streamlit
     plan: free
-    buildCommand: pip install -r backend/requirements.txt
+    rootDir: .
+    buildCommand: pip install -r requirements.txt
     startCommand: streamlit run streamlit_app.py --server.port 10001 --server.address 0.0.0.0
     envVars:
       - key: GROQ_API_KEY
         sync: false
-    rootDir: .
+      - key: BACKEND_URL
+        value: https://patentai-backend.onrender.com
