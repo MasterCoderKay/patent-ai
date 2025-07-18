@@ -75,3 +75,11 @@
 2025-07-15 10:08:29,782 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2025-07-15 10:09:27,311 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2025-07-18 14:20:33,713 - __main__ - INFO - Groq client initialized successfully
+2025-07-18 14:22:47,247 - app.main - INFO - Groq client initialized successfully
+2025-07-18 14:22:47,279 - app.main - INFO - Application startup complete
+2025-07-18 14:33:01,938 - app.main - ERROR - HTTP error 400: Missing required fields: ['title', 'description']
+2025-07-18 14:35:09,243 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-18 14:37:15,114 - app.main - ERROR - HTTP error 400: Description is required
+2025-07-18 14:38:47,929 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-18 14:41:28,006 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-18 14:41:39,236 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
