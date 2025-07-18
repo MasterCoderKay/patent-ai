@@ -4,7 +4,6 @@ from fastapi import FastAPI, Body, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 import logging
 from openai import OpenAI
-from dotenv import load_dotenv, find_dotenv
 from typing import Dict, Optional
 import time
 from fastapi.responses import JSONResponse
@@ -13,9 +12,6 @@ from fastapi.responses import JSONResponse
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
 MAX_RETRIES = 3
 RETRY_DELAY = 1
-
-# ---------------------- Environment Setup ----------------------
-load_dotenv(find_dotenv(raise_error_if_not_found=True))
 
 # ---------------------- Logging Configuration ----------------------
 logging.basicConfig(
