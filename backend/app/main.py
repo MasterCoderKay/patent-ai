@@ -4,9 +4,10 @@ from fastapi import FastAPI, Body, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 import logging
 from openai import OpenAI
-from typing import Dict, Optional
+from typing import Dict
 import time
 from fastapi.responses import JSONResponse
+import uvicorn
 
 # ---------------------- Constants ----------------------
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
@@ -74,7 +75,6 @@ async def call_groq_api_with_retry(
     temperature: float = 0.7,
     max_tokens: int = 2000
 ) -> str:
-    """Enhanced API call with retry logic"""
     last_error = None
 
     for attempt in range(MAX_RETRIES):
@@ -104,10 +104,7 @@ async def call_groq_api_with_retry(
 
 # ---------------------- API Endpoints ----------------------
 @app.post("/analyze", summary="Analyze invention", response_description="Detailed analysis of the invention")
-async def analyze_idea(payload: Dict = Body(..., example={
-    "title": "Smart Solar Panel",
-    "description": "A solar panel that automatically adjusts angle..."
-})) -> Dict:
+async def analyze_idea(payload: Dict = Body(...)):
     required_fields = ["title", "description"]
     if missing := [f for f in required_fields if f not in payload]:
         raise HTTPException(
@@ -143,125 +140,16 @@ async def analyze_idea(payload: Dict = Body(..., example={
             detail="Unexpected analysis failure"
         )
 
-@app.post("/score", summary="Score novelty", response_description="Novelty score with justification")
-async def score_novelty(payload: Dict = Body(..., example={
-    "description": "A new type of biodegradable battery..."
-})) -> Dict:
-    if "description" not in payload:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Description is required"
-        )
+# Alias endpoint for /analyze-idea to avoid 404
+@app.post("/analyze-idea")
+async def analyze_idea_alias(payload: Dict = Body(...)):
+    return await analyze_idea(payload)
 
-    try:
-        score = await call_groq_api_with_retry(
-            system_prompt=(
-                "Provide:\n"
-                "1. Novelty score (1-10)\n"
-                "2. 3-5 specific reasons justifying the score\n"
-                "3. Prior art considerations\n"
-                "Use markdown formatting"
-            ),
-            user_content=payload["description"],
-            temperature=0.5
-        )
-
-        return {
-            "status": "success",
-            "novelty_score": score,
-            "model": DEFAULT_MODEL
-        }
-
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.exception("Scoring failed unexpectedly")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Unexpected scoring failure"
-        )
-
-@app.post("/keywords", summary="Extract keywords", response_description="List of technical keywords")
-async def extract_keywords(payload: Dict = Body(..., example={
-    "description": "Quantum computing using photon entanglement..."
-})) -> Dict:
-    if "description" not in payload:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Description is required"
-        )
-
-    try:
-        keywords = await call_groq_api_with_retry(
-            system_prompt=(
-                "Extract:\n"
-                "1. Top 5 technical keywords\n"
-                "2. Relevance score for each (1-5)\n"
-                "Format as a markdown table with columns: Keyword, Relevance, Definition"
-            ),
-            user_content=payload["description"],
-            temperature=0.3
-        )
-
-        return {
-            "status": "success",
-            "keywords": keywords,
-            "model": DEFAULT_MODEL
-        }
-
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.exception("Keyword extraction failed unexpectedly")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Unexpected keyword extraction failure"
-        )
-
-@app.post("/market-pitch", summary="Generate pitch", response_description="Investor pitch")
-async def generate_pitch(payload: Dict = Body(..., example={
-    "description": "AI-powered medical diagnosis device..."
-})) -> Dict:
-    if "description" not in payload:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Description is required"
-        )
-
-    try:
-        pitch = await call_groq_api_with_retry(
-            system_prompt=(
-                "Create a 60-second investor pitch with:\n"
-                "1. Problem statement\n"
-                "2. Solution overview\n"
-                "3. Market size\n"
-                "4. Competitive advantage\n"
-                "5. Call to action\n"
-                "Use professional but engaging tone"
-            ),
-            user_content=payload["description"],
-            temperature=0.85,
-            max_tokens=1000
-        )
-
-        return {
-            "status": "success",
-            "investor_pitch": pitch,
-            "model": DEFAULT_MODEL
-        }
-
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.exception("Pitch generation failed unexpectedly")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Unexpected pitch generation failure"
-        )
+# You can add other endpoints like /score, /keywords, /market-pitch here...
 
 # ---------------------- Health Check ----------------------
 @app.get("/health", summary="Service health", response_description="Service status")
-async def health_check() -> Dict:
+async def health_check():
     groq_status = "active" if os.getenv("GROQ_API_KEY") else "inactive"
 
     return {
@@ -294,3 +182,8 @@ async def generic_exception_handler(request, exc):
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content={"status": "error", "message": "Internal server error"},
     )
+
+# ---------------------- Run with Uvicorn ----------------------
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
