@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Backend URL
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = "https://patentai-backend.onrender.com"
 
 # ---------- Page Setup ----------
 st.set_page_config(page_title="PatentAI", layout="wide")
