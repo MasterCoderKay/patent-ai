@@ -1,29 +1,25 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *.so
 
-# Environments
+# Virtual environments
 .env
 .venv/
 venv/
 env/
 
-# IDEs
+# VS Code and JetBrains IDEs
 .vscode/
 .idea/
 
-# App-specific
-app/instance/
-app/static/uploads/
-
-# API keys and secrets
+# Environment variable files
 .env
 *.env
 
-# System/IDE files (optional but recommended)
+# MacOS system files
 .DS_Store
-.idea/
-.vscode/
-__pycache__/
-*.pyc
+
+# Flask / FastAPI instance or static uploads
+app/instance/
+app/static/uploads/
